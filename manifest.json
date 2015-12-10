@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Slack-Redir Patcher",
+	"description": "Removes Slack link tracker and/or redirector",
+	"version": "2015.12.02",
+	"homepage_url": "https://github.com/cixtor/slackredir",
+	"icons" :{
+		"16" : "icon-16.png",
+		"48" : "icon-48.png",
+		"128" : "icon-128.png",
+		"197" : "icon-197.png"
+	},
+	"permissions": [ "activeTab" ],
+	"content_scripts": [{
+		"all_frames": true,
+		"js": [ "background.js" ],
+		"matches": [ "*://*/*" ]
+	}]
+}
