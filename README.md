@@ -19,6 +19,12 @@ Note that due to the way JavaScript works there is no way to accurately detect c
 5. ???
 6. Profit
 
+Additionally, I recommend you to add _"slack-redir.net"_ to your hosts file and point it to a loopback address like _"127.0.0.1"_; this is to prevent the accidental click of a link that was not caught by the extension DOM reflow patcher _(which may happen from time to time)_.
+
+```
+$ echo "127.0.0.1  slack-redir.net" | sudo tee -a /etc/hosts
+```
+
 ### License
 
 ```
