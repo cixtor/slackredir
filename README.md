@@ -2,7 +2,7 @@
 
 Slack, the _"messaging app for teams"_ uses a peculiar technique very common in forums and other board-like websites; they patch every link posted in public and private channels as well as private chat sessions to override the _mouseOver_ and _onClick_ events; this allows them to [1] inject some kind of hotlinking protection, [2] track external links posted in their service, and [3] probably something else that I _(as an outsider)_ do not know.
 
-Some time ago I built [Pastio](http://cixtor.com/pastio) a pastebin-like web service that was later integrated in the internal toolset of my current employeer [Sucuri](https://pastebin.sucuri.net/); one of its features is the ability to create private posts which obviously should not be visible outside of our network. When my co-workers share links on Slack _(as we are using this service for our communication)_ the redirection patch _(probably?)_ tracks the private links.
+Some time ago I built [Pastio](http://cixtor.com/pastio) a pastebin-like web service that was later integrated in the internal toolset of my current employer [Sucuri](https://pastebin.sucuri.net/); one of its features is the ability to create private posts which obviously should not be visible outside of our network. When my co-workers share links on Slack _(as we are using this service for our communication)_ the redirection patch _(probably?)_ tracks the private links.
 
 This Chrome extension aims to fix this _(security?)_ issue by re-patching the _mouseOver_ and _onClick_ events in the reflow of the DOM, this way you can click and/or right-click the links posted in the channels or private sessions without leaking sensitive information.
 
@@ -12,7 +12,7 @@ Note that due to the way JavaScript works there is no way to accurately detect c
 
 ### Installation
 
-1. Clone of download this repository
+1. Clone or download this repository
 2. Using Chromium open this: chrome://extensions/
 3. Click the _"Load unpacked extension"_ button
 4. Browse your disk and select the extension
